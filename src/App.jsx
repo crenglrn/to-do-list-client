@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Intercom from '@intercom/messenger-js-sdk'
 import './App.css'
 
 const API = `${import.meta.env.VITE_API_URL ?? 'http://localhost:3000'}/todos`
@@ -15,6 +16,8 @@ async function apiFetch(path, options = {}) {
 export default function App() {
   const [todos, setTodos] = useState([])
   const [text, setText] = useState('')
+
+  Intercom({ app_id: 'ocu6xd4k' })
 
   useEffect(() => {
     apiFetch(API).then(setTodos)
