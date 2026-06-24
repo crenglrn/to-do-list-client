@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Intercom from '@intercom/messenger-js-sdk'
+import { Intercom } from '@intercom/messenger-js-sdk'
 import './App.css'
 
 const API = `${import.meta.env.VITE_API_URL ?? 'http://localhost:3000'}/todos`
